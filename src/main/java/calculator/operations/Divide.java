@@ -29,12 +29,10 @@ public class Divide extends Calculator implements Operation {
     public double doCalculation(double leftValue, double rightValue) {
         if (leftValue == 0 && rightValue == 0) {
             System.out.println("Error: Division zero by zero is not allowed.");
-            System.exit(0);
             throw new ArithmeticException("Error: Division zero by zero is not allowed.");
 
         } else if (rightValue == 0) {
             System.out.println("Error: Division by zero is not allowed.");
-            System.exit(0);
             throw new NumberFormatException("Error: Division by zero is not allowed.");
         } else {
             setLeftValue(leftValue);

@@ -26,7 +26,6 @@ public class SquareRoot extends Calculator {
         setLeftValue(leftValue);
         if (leftValue < 0) {
             System.out.println("Error: Cannot find the square root of a negative number");
-            System.exit(0);
             throw new NumberFormatException();
         } else {
             calculate();

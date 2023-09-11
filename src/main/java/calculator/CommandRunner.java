@@ -137,6 +137,14 @@ public class CommandRunner {
             Scanner scanner3 = new Scanner(System.in);
             rightVal = scanner3.nextDouble();
 
+            if (leftVal == 0 && rightVal == 0) {
+                System.out.println("*** Error: Division zero by zero is not allowed. *** \n");
+                start();
+
+            } else if (rightVal == 0) {
+                System.out.println("*** Error: Division by zero is not allowed. *** \n");
+                start();
+            }
             divide.doCalculation(leftVal,rightVal);
             result =  divide.doCalculation(leftVal,rightVal);
 
@@ -158,6 +166,10 @@ public class CommandRunner {
         } else if (option.equals("6")) {
             operator += separator + squareRoot.getSymbol() + separator;
 
+            if (leftVal < 0) {
+                System.out.println("*** Error: Cannot find the square root of a negative number *** \n");
+                start();
+            }
             squareRoot.doCalculation(leftVal);
             result =  squareRoot.doCalculation(leftVal);
 
