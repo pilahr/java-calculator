@@ -112,6 +112,7 @@ public class CommandRunner {
             sb.append(rightVal);
             sb.append(" = ");
             sb.append(result);
+            sb.append("\n");
 
         } else if (option.equals("3")) {
             operator += separator + multiply.getSymbol() + separator;
@@ -128,6 +129,7 @@ public class CommandRunner {
             sb.append(rightVal);
             sb.append(" = ");
             sb.append(result);
+            sb.append("\n");
 
         } else if (option.equals("4")) {
             operator += separator + divide.getSymbol() + separator;
@@ -152,6 +154,7 @@ public class CommandRunner {
             sb.append(rightVal);
             sb.append(" = ");
             sb.append(result);
+            sb.append("\n");
 
         } else if (option.equals("5")) {
             operator += separator + square.getSymbol() + separator;
@@ -162,6 +165,7 @@ public class CommandRunner {
             sb.append(operator);
             sb.append(" = ");
             sb.append(result);
+            sb.append("\n");
 
         } else if (option.equals("6")) {
             operator += separator + squareRoot.getSymbol() + separator;
@@ -176,6 +180,7 @@ public class CommandRunner {
             sb.append(operator);
             sb.append(" = ");
             sb.append(result);
+            sb.append("\n");
 
         } else if (option.equals("7")){
             clear();
