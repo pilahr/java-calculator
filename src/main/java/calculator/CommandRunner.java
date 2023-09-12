@@ -27,8 +27,18 @@ public class CommandRunner {
 
         System.out.println("-------------------------------------");
         System.out.println("\t\t== CALCULATOR ==");
+        System.out.println("\t   |---------------|");
+        System.out.println("\t   |              O|");
+        System.out.println("\t   |---------------|");
+        System.out.println("\t   | C | √ | x²| ÷ |");
+        System.out.println("\t   | 7 | 8 | 9 | x |");
+        System.out.println("\t   | 4 | 5 | 6 | - |");
+        System.out.println("\t   | 1 | 2 | 3 | + |");
+        System.out.println("\t   |  0    | . | = |");
+        System.out.println("\t   |---------------|");
+
         System.out.println("-------------------------------------");
-        System.out.println("Select the option below");
+        System.out.println("= Select the option below =");
         System.out.println("1:Calculation | 2:Exit");
 
         Scanner scanner = new Scanner(System.in);
