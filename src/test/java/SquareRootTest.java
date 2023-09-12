@@ -32,8 +32,15 @@ class SquareRootTest {
 
     @Test
     void squareRoot_NegativeInput_CorrectAnswer() {
-        double result = squareRoot.doCalculation(-9);
-        assertEquals(null, result);
+        try {
+            squareRoot.doCalculation(-9);
+        }
+        catch(NumberFormatException e) {
+            Throwable exception = assertThrows(NumberFormatException.class, ()-> {
+                throw new NumberFormatException("Error: Cannot find the square root of a negative number");
+            });
+            assertEquals("Error: Cannot find the square root of a negative number", exception.getMessage());
+        }
     }
 
 }

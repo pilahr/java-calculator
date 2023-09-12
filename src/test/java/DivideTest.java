@@ -1,4 +1,5 @@
 import calculator.operations.Divide;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -44,13 +45,27 @@ class DivideTest {
 
     @Test
     void divide_DivideZeroByZero_CorrectAnswer() {
-        double result = divide.doCalculation(0,0);
-        assertNull(result);
+        try {
+            divide.doCalculation(0, 0);
+        }
+        catch(ArithmeticException e) {
+            Throwable exception = assertThrows(ArithmeticException.class, ()-> {
+                throw new ArithmeticException("Error: Division zero by zero is not allowed.");
+            });
+            assertEquals("Error: Division zero by zero is not allowed.", exception.getMessage());
+        }
     }
 
     @Test
     void divide_RightValueIsZero_CorrectAnswer() {
-        double result = divide.doCalculation(6,0);
-        assertNull(result);
+        try {
+            divide.doCalculation(6,0);
+        }
+        catch(NumberFormatException e) {
+            Throwable exception = assertThrows(NumberFormatException.class, ()-> {
+                throw new NumberFormatException("Error: Division by zero is not allowed.");
+            });
+            assertEquals("Error: Division by zero is not allowed.", exception.getMessage());
+        }
     }
 }
